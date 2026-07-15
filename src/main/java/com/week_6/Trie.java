@@ -1,6 +1,5 @@
 package com.week_6;
 
-import java.util.Collections;
 import java.util.List;
 
 public class Trie implements ITrie {
@@ -14,6 +13,7 @@ public class Trie implements ITrie {
       if(node.getNode(curr) == null) {
         Node newnode = new Node();
         node.addNode(curr, newnode);
+        node.addName(name);
         node = newnode;
       }
       else{
